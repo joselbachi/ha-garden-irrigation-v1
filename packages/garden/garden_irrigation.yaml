@@ -349,33 +349,33 @@ script:
       - wait_template: "{{ is_state('script.irrigation_irrigate_a_zone', 'off') }}"
       
       #=== Call the script to irrigate zone 5
-      - service: script.irrigation_irrigate_a_zone
-        data_template:
-          cycle: '{{ cycle }}'
-          zone: '5'
+#      - service: script.irrigation_irrigate_a_zone
+#        data_template:
+#          cycle: '{{ cycle }}'
+#          zone: '5'
 
       #=== Wait for script.irrigation_irrigate_a_zone to end
-      - wait_template: "{{ is_state('script.irrigation_irrigate_a_zone', 'off') }}"
+#      - wait_template: "{{ is_state('script.irrigation_irrigate_a_zone', 'off') }}"
       
       
       #=== Call the script to irrigate zone 6
-      - service: script.irrigation_irrigate_a_zone
-        data_template:
-          cycle: '{{ cycle }}'
-          zone: '6'
+#      - service: script.irrigation_irrigate_a_zone
+#        data_template:
+#          cycle: '{{ cycle }}'
+#          zone: '6'
 
       #=== Wait for script.irrigation_irrigate_a_zone to end
-      - wait_template: "{{ is_state('script.irrigation_irrigate_a_zone', 'off') }}"
+#      - wait_template: "{{ is_state('script.irrigation_irrigate_a_zone', 'off') }}"
       
       
       #=== Call the script to irrigate zone 7
-      - service: script.irrigation_irrigate_a_zone
-        data_template:
-          cycle: '{{ cycle }}'
-          zone: '7'
+#     - service: script.irrigation_irrigate_a_zone
+#        data_template:
+#          cycle: '{{ cycle }}'
+#          zone: '7'
 
       #=== Wait for script.irrigation_irrigate_a_zone to end
-      - wait_template: "{{ is_state('script.irrigation_irrigate_a_zone', 'off') }}"
+#      - wait_template: "{{ is_state('script.irrigation_irrigate_a_zone', 'off') }}"
       
 #=== Update progress in ui
       - service: input_text.set_value
