@@ -14,9 +14,9 @@ automation:
           - input_boolean.zone2_automatically_adjust_time
           - input_boolean.zone3_automatically_adjust_time
           - input_boolean.zone4_automatically_adjust_time
-          - input_boolean.zone5_automatically_adjust_time
-          - input_boolean.zone6_automatically_adjust_time
-          - input_boolean.zone7_automatically_adjust_time
+#          - input_boolean.zone5_automatically_adjust_time
+#          - input_boolean.zone6_automatically_adjust_time
+#          - input_boolean.zone7_automatically_adjust_time
         to: "on"
 
     action:
@@ -124,23 +124,23 @@ script:
           adjustment: "{{ float(states('input_number.evapotranspiration_daily')) }}"
       - wait_template: "{{ is_state('script.set_waterbucket', 'off') }}"
 
-      - service: script.set_waterbucket
-        data_template:
-          zone: "5"
-          adjustment: "{{ float(states('input_number.evapotranspiration_daily')) }}"
-      - wait_template: "{{ is_state('script.set_waterbucket', 'off') }}"
+#      - service: script.set_waterbucket
+#        data_template:
+#          zone: "5"
+#          adjustment: "{{ float(states('input_number.evapotranspiration_daily')) }}"
+#      - wait_template: "{{ is_state('script.set_waterbucket', 'off') }}"
 
-      - service: script.set_waterbucket
-        data_template:
-          zone: "6"
-          adjustment: "{{ float(states('input_number.evapotranspiration_daily')) }}"
-      - wait_template: "{{ is_state('script.set_waterbucket', 'off') }}"
+#      - service: script.set_waterbucket
+#        data_template:
+#          zone: "6"
+#          adjustment: "{{ float(states('input_number.evapotranspiration_daily')) }}"
+#      - wait_template: "{{ is_state('script.set_waterbucket', 'off') }}"
 
-      - service: script.set_waterbucket
-        data_template:
-          zone: "7"
-          adjustment: "{{ float(states('input_number.evapotranspiration_daily')) }}"
-      - wait_template: "{{ is_state('script.set_waterbucket', 'off') }}"
+#      - service: script.set_waterbucket
+#        data_template:
+#          zone: "7"
+#          adjustment: "{{ float(states('input_number.evapotranspiration_daily')) }}"
+#      - wait_template: "{{ is_state('script.set_waterbucket', 'off') }}"
 
   #=========================================
   #=== Set waterbucket for Zone
@@ -210,22 +210,22 @@ script:
       - service: script.calculate_adjusted_zone_duration
         data:
           zone: "4"
-      - wait_template: "{{ is_state('script.calculate_adjusted_zone_duration', 'off') }}"
+#      - wait_template: "{{ is_state('script.calculate_adjusted_zone_duration', 'off') }}"
 
-      - service: script.calculate_adjusted_zone_duration
-        data:
-          zone: "5"
-      - wait_template: "{{ is_state('script.calculate_adjusted_zone_duration', 'off') }}"
+#      - service: script.calculate_adjusted_zone_duration
+#        data:
+#          zone: "5"
+#      - wait_template: "{{ is_state('script.calculate_adjusted_zone_duration', 'off') }}"
 
-      - service: script.calculate_adjusted_zone_duration
-        data:
-          zone: "6"
-      - wait_template: "{{ is_state('script.calculate_adjusted_zone_duration', 'off') }}"
+#      - service: script.calculate_adjusted_zone_duration
+#        data:
+#          zone: "6"
+#      - wait_template: "{{ is_state('script.calculate_adjusted_zone_duration', 'off') }}"
 
-      - service: script.calculate_adjusted_zone_duration
-        data:
-          zone: "7"
-      - wait_template: "{{ is_state('script.calculate_adjusted_zone_duration', 'off') }}"
+#      - service: script.calculate_adjusted_zone_duration
+#        data:
+#          zone: "7"
+#      - wait_template: "{{ is_state('script.calculate_adjusted_zone_duration', 'off') }}"
 
   #========================================================
   #=== Adjust zone duration for weather conditions
