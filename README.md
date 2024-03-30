@@ -1,5 +1,5 @@
 # Weather based Smart Irrigation setup in Home Assistant
-__Adopted from kloggy's excellent work on [HA Irrigation](https://github.com/kloggy/HA-Irrigation-Version1)  adn from andother excellent work (klec00) on  [HA Garden Irrigation](https://github.com/klec00/ha-garden-irrigation).__
+__Adopted from kloggy's excellent work on [HA Irrigation](https://github.com/kloggy/HA-Irrigation-Version1)  and from andother excellent work (klec00) on  [HA Garden Irrigation](https://github.com/klec00/ha-garden-irrigation).__
 
 My only wish is to reduce the number of zones.
 
